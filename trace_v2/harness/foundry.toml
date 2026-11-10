@@ -1,0 +1,12 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+# Per-file solc so a pre-0.8 victim (most of the corpus) compiles alongside the 0.8 test.
+# Do NOT pin a single `solc` here — that would defeat the cross-version deployCode path.
+auto_detect_solc = true
+# Explicit for reproducibility; the bridge overrides per-case where needed (e.g. 2.4/2.5,
+# whose selfdestruct oracle needs a specific evm_version + cross-tx observation).
+evm_version = "cancun"
+
+# See https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

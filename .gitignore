@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Secrets
+.env
+
+# LLM response cache (regenerated; keyed deterministically)
+.cache/
+trace_v2/.cache/
+
+# Foundry — installed/generated locally, never committed
+trace_v2/harness/lib/
+trace_v2/harness/out/
+trace_v2/harness/cache/
+
+# Throwaway per-run Foundry projects (created under TMPDIR, but just in case)
+trace2_run_*/

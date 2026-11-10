@@ -1,0 +1,13 @@
+# TRACE (execution-validated pipeline) — Python dependencies.
+# Install into the project venv:  python -m pip install -r trace_v2/requirements.txt
+#
+# The LLM stages need only these two packages; everything else is stdlib.
+requests>=2.32,<3
+python-dotenv>=1.0,<2
+
+# --- external toolchain (NOT pip; install separately, see trace_v2/README.md "Setup") ---
+#   Foundry (forge/anvil/cast) v1.8.1     curl -L https://foundry.paradigm.xyz | bash && foundryup
+#   forge-std v1.16.2                      forge install foundry-rs/forge-std@v1.16.2  (in trace_v2/harness)
+#   solc                                   auto-detected per-victim pragma; solc-select for 0.4.x victims
+#
+# Config: LLM key in ../.env as GPT_API_KEY.  Verified with Python 3 + requests 2.32.5, python-dotenv 1.2.2.
