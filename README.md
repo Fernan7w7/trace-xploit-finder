@@ -78,7 +78,7 @@ supplies recall.
 
 Best on **self-contained, single-file** contracts (one deployable unit). Contracts that depend
 on other already-deployed contracts need mainnet-fork staging, which this packaged tool does
-not include.
+not include (yet).
 
 ## Layout
 
